@@ -1,0 +1,35 @@
+﻿<Window x:Class="ListP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListP"
+        mc:Ignorable="d"
+        Background="{DynamicResource WindowBrush}"
+        Title="КраснаяЗемля" Height="325" Width="518">
+    <Window.Resources>
+        <SolidColorBrush x:Key="WindowBrush" Color="AliceBlue"/>
+        <ControlTemplate x:Key="Button_Bul" TargetType="Button">
+            <Border BorderBrush="#AF9B60" BorderThickness="0" CornerRadius="10, 2, 2, 10"
+                    TextBlock.Foreground="#980002" Padding="3" Width="80" Height="25">
+                <Border.Background>
+                    <SolidColorBrush Color="#AF9B60"/>
+                </Border.Background>
+                <ContentPresenter RecognizesAccessKey="True"></ContentPresenter>
+            </Border>
+        </ControlTemplate>
+    </Window.Resources>
+    <Grid Margin="0,0,25,16">
+        <Button Content="Движение"  Template="{StaticResource Button_Bul}" 
+                HorizontalAlignment="Left" Margin="51,90,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <TextBox HorizontalAlignment="Left" Margin="20,45,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120"/>
+        <Label Content="Имя" HorizontalAlignment="Left" Margin="20,19,0,0" VerticalAlignment="Top"/>
+        <Button Content="Параметры"  Template="{StaticResource Button_Bul}" 
+            HorizontalAlignment="Left" Margin="51,120,0,0" VerticalAlignment="Top"/>
+        <Button Content="Навыки"  Template="{StaticResource Button_Bul}" 
+            HorizontalAlignment="Left" Margin="51,150,0,0" VerticalAlignment="Top"/>
+        <Button Content="Черты"  Template="{StaticResource Button_Bul}" 
+            HorizontalAlignment="Left" Margin="51,180,0,0" VerticalAlignment="Top"/>
+        <Button Content="Итог" HorizontalAlignment="Left" Height="61" Margin="344,130,0,0" VerticalAlignment="Top" Width="58"/>
+    </Grid>
+</Window>
