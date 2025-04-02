@@ -19,24 +19,6 @@ namespace ClassLibrary
     {
 
     }
-    public class Ideal
-    {
 
-        public int Id { get; set; }
-        public string? Name { get; set; }
-        public string? Mov_1 { get; set; }
-        public string? Mov_2 { get; set; }
-        public string? Desc { get; set; }
-    }
-    public class ApplicationContext : DbContext
-    {
-        public DbSet<Ideal> Ideals { get; set; }
-
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=Red_Stone_15;Username=postgres;Password=123");
-        }
-    }
-
+   
 }

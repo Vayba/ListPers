@@ -22,19 +22,5 @@
         <Label Content="Label" HorizontalAlignment="Left" Height="30" Margin="74,79,0,0" VerticalAlignment="Top" Width="146"/>
         <Label Content="Выберите идеал:" HorizontalAlignment="Left" Height="32" Margin="74,154,0,0" VerticalAlignment="Top" Width="175"/>
         <Label Content="Label" HorizontalAlignment="Left" Height="30" Margin="74,109,0,0" VerticalAlignment="Top" Width="146"/>
-        <DataGrid x:Name="dataGridIdeal"
-                  ItemsSource= "{Binding Ideal}"  
-                  SelectedItem="{Binding SelectedProduct}"
-                  Margin="0,186,0,0" 
-                 
-                  AutoGenerateColumns="False">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Binding="{Binding Id}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Mov_1" Binding="{Binding Mov_1}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Mov_2" Binding="{Binding Mov_2}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="Desc" Binding="{Binding Desc}" IsReadOnly="True"/>
-            </DataGrid.Columns>
-        </DataGrid>
     </Grid>
 </Window>
