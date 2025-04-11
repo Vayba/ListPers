@@ -20,53 +20,84 @@ namespace ListP
     /// </summary>
     public partial class MainWindow : Window
     {
-       
+        public Character GG { get; set; } = new Character();
         public MainWindow()
         {   
             InitializeComponent();
+            
             //Color Back = new SolidColorBrush(Colors.Blue);;
             Brush Back = new SolidColorBrush(Colors.Blue);
+            GG.CHA = 0;
+            GG.STR = 0;
+            GG.INT = 0;
+            GG.DEX = 0;
+            GG.TEL = 0;
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show($"Привет");
-
-            //string Content = Interaction.InputBox("Vvedi","Imya","Pin", 200, 200);
-            //NavigationWindow win = new NavigationWindow();
-            //win.Content = new Movement();
-            //win.Show();
-            //this.Background = C;
-            //if (Content != null)
-            // {
-            //    MessageBox.Show(Content);
-            // }
-
-            //var myForm = new Movement(this);
-            //myForm.Show();
+            MessageBox.Show($"Здесь ты выбираешь принципы персонажа");
 
             Movement Movement = new Movement(this);
             Movement.Show();
         }
-         
 
-            public void ChangeBackgroundColor(string color)
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"Здесь ты выбираешь характеристики ");
+
+            Parametr Parametr = new Parametr(this);
+            Parametr.Show();
+        }
+
+        private void Button_Click_end(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"Твой персонаж");
+
+            Itog Itog = new Itog (this);
+            Itog.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"Здесь ты выбираешь навыки");
+
+            if (GG.STR == 0)
+            {
+                MessageBox.Show($"Для начала распредели характеристики");
+            }
+            else
+            {
+                Skills Skills = new Skills(this);
+                Skills.Show();
+            }
+        }
+
+        public void ChangeBackgroundColor(string color)
         {
             switch (color)
             {
-                case "Белый":
+                case "Белое":
                     this.Background = System.Windows.Media.Brushes.White;
                     break;
-                case "Красный":
+                case "Красное":
                     this.Background = System.Windows.Media.Brushes.Red;
                     break;
-                case "Черный":
+                case "Черное":
                     this.Background = System.Windows.Media.Brushes.Black;
                     break;
-                case "Зеленый":
+                case "Зеленое":
                     this.Background = System.Windows.Media.Brushes.Green;
                     break;
             }
+        }
+        private void Name_Button_Click(object sender, RoutedEventArgs e)
+        {
+           
+
+            GG.Name = Name_TextBox.Text;
+            MessageBox.Show($"Теперь ты {GG.Name}");
         }
 
     }

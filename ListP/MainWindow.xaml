@@ -18,18 +18,26 @@
                 <ContentPresenter RecognizesAccessKey="True"></ContentPresenter>
             </Border>
         </ControlTemplate>
+        <ControlTemplate x:Key="Other" TargetType="Button">
+            <Border BorderBrush="Black" BorderThickness="1" CornerRadius="15, 15, 15, 15"
+            TextBlock.Foreground="#980002" Padding="3" Width="30" Height="30">
+                <Border.Background>
+                    <SolidColorBrush Color="#76888f"/>
+                </Border.Background>
+                <ContentPresenter RecognizesAccessKey="True"></ContentPresenter>
+            </Border>
+        </ControlTemplate>
     </Window.Resources>
-    <Grid Margin="0,0,25,16">
+    <Grid Margin="0,0,0,-6">
         <Button Content="Движение"  Template="{StaticResource Button_Bul}" 
                 HorizontalAlignment="Left" Margin="51,90,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <TextBox HorizontalAlignment="Left" Margin="20,45,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120"/>
-        <Label Content="Имя" HorizontalAlignment="Left" Margin="20,19,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Name_TextBox" HorizontalAlignment="Left" Margin="20,45,0,0" TextWrapping="Wrap" Text=" " VerticalAlignment="Top" Width="120"/>
+        <Label Content="Имя"  HorizontalAlignment="Left" Margin="20,19,0,0" VerticalAlignment="Top"/>
         <Button Content="Параметры"  Template="{StaticResource Button_Bul}" 
-            HorizontalAlignment="Left" Margin="51,120,0,0" VerticalAlignment="Top"/>
-        <Button Content="Навыки"  Template="{StaticResource Button_Bul}" 
+            HorizontalAlignment="Left" Margin="51,120,0,0" VerticalAlignment="Top"  Click="Button_Click_2"/>
+        <Button Content="Навыки" Click="Button_Click_1" Template="{StaticResource Button_Bul}" 
             HorizontalAlignment="Left" Margin="51,150,0,0" VerticalAlignment="Top"/>
-        <Button Content="Черты"  Template="{StaticResource Button_Bul}" 
-            HorizontalAlignment="Left" Margin="51,180,0,0" VerticalAlignment="Top"/>
-        <Button Content="Итог" HorizontalAlignment="Left" Height="61" Margin="344,130,0,0" VerticalAlignment="Top" Width="58"/>
+        <Button  Content="Итог" HorizontalAlignment="Left" Height="61" Margin="344,130,0,0" VerticalAlignment="Top" Width="58"  Click="Button_Click_end"/>
+        <Button x:Name="Name_Button" Click="Name_Button_Click" Template="{StaticResource Other}" Content="Имя" HorizontalAlignment="Left" Height="39" Margin="157,34,0,0" VerticalAlignment="Top" Width="34"/>
     </Grid>
 </Window>

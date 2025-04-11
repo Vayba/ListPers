@@ -1,0 +1,60 @@
+﻿<Window x:Class="ListP.Itog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListP"
+        mc:Ignorable="d"
+        Title="Itog" Height="555" Width="871">
+    <Grid Margin="0,0,10,-6">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="328*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Движение:" x:Name="Start" Margin="10,60,599,331" Grid.ColumnSpan="2"/>
+        <Label Content="Идеал:" x:Name="Ideal" Margin="10,114,599,278" Grid.ColumnSpan="2"/>
+        <Label Content="Имя:" x:Name="Name" Margin="10,10,599,385" Grid.ColumnSpan="2"/>
+        <Button Content="Сохранить лист" HorizontalAlignment="Left" VerticalAlignment="Top" Click="ScreenshotButton_Click" Grid.Column="1" Margin="527,327,0,0" Height="69"/>
+        <Label Margin="366,0,10,278" Grid.Column="1">
+            <StackPanel Height="124" Width="270" >
+                <TextBlock Text="Параметры" FontSize="30" TextAlignment="Center"/>
+                <TextBlock x:Name="str" Text="Сила"/>
+                <TextBlock x:Name="dex" Text="Ловкость"/>
+                <TextBlock x:Name="con" Text="Тело"/>
+                <TextBlock x:Name="intel" Text="Смекалка"/>
+                <TextBlock x:Name="cha" Text="Характер"/>
+            </StackPanel>
+        </Label>
+        <Button Content="Сохранить персонажа" Click="SaveButton_Click" Grid.Column="1" Margin="503,406,74,74"/>
+        <Button Content="Загрузить персонажа" Click="LoadButton_Click" Margin="503,230,76,230" Grid.Column="1"/>
+        <Label Margin="20,152,479,49" Grid.ColumnSpan="2">
+            <StackPanel Height="325" Width="270"  >
+                <TextBlock Text="Навыки" FontSize="30" TextAlignment="Center"/>
+                <TextBlock x:Name="fig" FontSize="35" Text="Драка"/>
+                <TextBlock x:Name="pew" FontSize="35" Text="Стрельба"/>
+                <TextBlock x:Name="zna" FontSize="35" Text="Знание"/>
+                <TextBlock x:Name="atl" FontSize="35"  Text="Атлетика"/>
+                <TextBlock x:Name="vni" FontSize="35"  Text="Внимание"/>
+                <TextBlock x:Name="ube" FontSize="35" Text="Убеждение"/>
+            </StackPanel>
+        </Label>
+        <Button Name="btn_6" Click="Talk_Roll" Grid.Column="1" Margin="177,417,479,85">
+            <Image Source="C:\Users\pyroi\source\repos\ListP\dice_image.png" Width="36" RenderTransformOrigin="0.483,0.519" Height="33"/>
+        </Button>
+        <Button x:Name="btn_2" Click="Strell_Roll" Grid.Column="1" Margin="177,245,479,257">
+            <Image Source="C:\Users\pyroi\source\repos\ListP\dice_image.png" Width="36" RenderTransformOrigin="0.483,0.519" Height="33"/>
+        </Button>
+        <Button x:Name="btn_3" Click="Znan_Roll" Grid.Column="1" Margin="177,288,479,214">
+            <Image Source="C:\Users\pyroi\source\repos\ListP\dice_image.png" Width="36" RenderTransformOrigin="0.483,0.519" Height="33"/>
+        </Button>
+        <Button x:Name="btn_4" Click="Atl_Roll" Grid.Column="1" Margin="177,331,479,171">
+            <Image Source="C:\Users\pyroi\source\repos\ListP\dice_image.png" Width="36" RenderTransformOrigin="0.483,0.519" Height="33"/>
+        </Button>
+        <Button x:Name="btn5" Click="Vnim_Roll" Grid.Column="1" Margin="177,374,479,128">
+            <Image Source="C:\Users\pyroi\source\repos\ListP\dice_image.png" Width="36" RenderTransformOrigin="0.483,0.519" Height="33"/>
+        </Button>
+        <Button Name="btn_1" Grid.Column="1" Click="Fight_Roll" Margin="177,202,479,300">
+            <Image Source="C:\Users\pyroi\source\repos\ListP\dice_image.png" Width="36" RenderTransformOrigin="0.483,0.519" Height="33"/>
+        </Button>
+    </Grid>
+</Window>

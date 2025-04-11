@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ListP"
         mc:Ignorable="d"
+        Closing="Window_Closing"  
         Title="Movement" Height="450" Width="800">
     <Grid>
         <ComboBox x:Name="MovComboBox" HorizontalAlignment="Left"
@@ -12,15 +13,18 @@
                   SelectionChanged="ColorComboBox_SelectionChanged" 
                   VerticalAlignment="Top" Width="119"
                   >
-            <ComboBoxItem Content="Белый"/>
-            <ComboBoxItem Content="Красный"/>
-            <ComboBoxItem Content="Черный"/>
-            <ComboBoxItem Content="Зеленый"/>
+            <ComboBoxItem Content="Белое"/>
+            <ComboBoxItem Content="Красное"/>
+            <ComboBoxItem Content="Черное"/>
+            <ComboBoxItem Content="Зеленое"/>
         </ComboBox>
         <Button Content="Button" HorizontalAlignment="Left" Margin="678,69,0,0" VerticalAlignment="Top" Click="Click_Mov"/>
         <Label Content="Ваша стартовая черта:" HorizontalAlignment="Left" Height="26" Margin="74,48,0,0" VerticalAlignment="Top" Width="193"/>
-        <Label Content="Label" HorizontalAlignment="Left" Height="30" Margin="74,79,0,0" VerticalAlignment="Top" Width="146"/>
+        <Label Content=" "  x:Name="label1"  HorizontalAlignment="Left" Height="30" Margin="74,79,0,0" VerticalAlignment="Top" Width="146"/>
         <Label Content="Выберите идеал:" HorizontalAlignment="Left" Height="32" Margin="74,154,0,0" VerticalAlignment="Top" Width="175"/>
-        <Label Content="Label" HorizontalAlignment="Left" Height="30" Margin="74,109,0,0" VerticalAlignment="Top" Width="146"/>
+        <Label Content=" "  x:Name="label2" HorizontalAlignment="Left" Height="45" Margin="74,109,0,0" VerticalAlignment="Top" Width="548"/>
+        <DataGrid x:Name="dataGrid" AutoGenerateColumns="True"  Margin="0,186,0,0"  SelectionChanged="DataGrid_SelectionChanged" IsReadOnly="True">
+            
+        </DataGrid>
     </Grid>
 </Window>

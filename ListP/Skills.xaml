@@ -1,0 +1,50 @@
+﻿<Window x:Class="ListP.Skills"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ListP"
+        mc:Ignorable="d"
+         Closing="Window_Closing" 
+        Title="Skills" Height="450" Width="800">
+    <Grid>
+        <Label x:Name="AvailablePointsLabel" Content="Очки: " Margin="362,10,344,379"/>
+        <StackPanel Orientation="Horizontal" Margin="48,55,586,317">
+            <Label Content="Атлетика" Margin="0,0,0,0"/>
+            <Button Click="AtlMin" Content="-" Margin="0,0,0,0"/>
+            <TextBox x:Name="AtlTextBox" TextWrapping="Wrap" Text="0" Width="50" IsReadOnly="True" Margin="0,0,0,0"/>
+            <Button Click="AtlPlus" Content="+" Margin="0,0,0,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="582,349,73,28">
+            <Label Content="Убеж." Margin="0,0,0,0"/>
+            <Button Click="TalkMin" Content="-" Margin="0,0,0,0"/>
+            <TextBox x:Name="TalkTextBox" TextWrapping="Wrap" Text="0" IsReadOnly="True" Width="50" Margin="0,0,0,0"/>
+            <Button Click="TalkPlus" Content="+" Margin="0,0,0,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="48,344,607,23">
+            <Label Content="Драка" Margin="0,0,0,0"/>
+            <Button Click="FightMin" Content="-" Margin="0,0,0,0"/>
+            <TextBox x:Name="FighttextBox" TextWrapping="Wrap" Text="0" IsReadOnly="True" Width="50" Margin="0,0,0,0"/>
+            <Button Click="FightPlus" Content="+" Margin="0,0,0,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="48,189,586,178">
+            <Label Content="Пальба" Margin="0,0,0,0"/>
+            <Button Click="VstrMin" Content="-" Margin="0,0,0,0"/>
+            <TextBox x:Name="VstrTextBox" TextWrapping="Wrap" Text="0" Width="50" Margin="0,0,0,0" IsReadOnly="True"/>
+            <Button Click="VstrPlus" Content="+" Margin="0,0,0,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="571,68,73,306" RenderTransformOrigin="0.508,-0.257">
+            <Label Content="Знание" Margin="0,0,0,0"/>
+            <Button Click="ZnaMin"  Content="-" Margin="0,0,0,0"/>
+            <TextBox x:Name="ZnaTextBox" TextWrapping="Wrap" Text="0" IsReadOnly="True" Width="50"/>
+            <Button Click="ZnaPlus" Content="+" Margin="0,0,0,0"/>
+        </StackPanel>
+        <Button x:Name="SaveButton" Click="Save" Content="Сохранить" Margin="343,185,356,204"/>
+        <StackPanel Orientation="Horizontal" Margin="571,185,73,189" RenderTransformOrigin="0.508,-0.257">
+            <Label Content="Внимание" Margin="0,0,0,0"/>
+            <Button Click="VniMin"  Content="-" Margin="0,0,0,0"/>
+            <TextBox x:Name="VninTextBox" TextWrapping="Wrap" Text="0" IsReadOnly="True" Width="50"/>
+            <Button Click="VniPlus" Content="+" Margin="0,0,0,0"/>
+        </StackPanel>
+    </Grid>
+</Window>
